@@ -6,7 +6,9 @@ spring:
         password: 123456
         driver-class-name: com.mysql.cj.jdbc.Driver
 
-thymeleaf:
-    prefix: classpath:/templates/ # 访问template下的html文件需要配置模板，映射，路径指向
-    suffix: .html
-    cache: false # 开发时关闭缓存,不然没法看到实时页面
+    resources:
+        static-locations: classpath:/
+    mvc:
+        view:
+            prefix: templates/
+            suffix: .html

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class WebController {
@@ -14,8 +15,10 @@ public class WebController {
 
     //返回指定页面
     @RequestMapping("/index")
-    public String  index(){
-        return "index.html";
+    public ModelAndView index(){
+        ModelAndView mv = new ModelAndView("index");
+        mv.addObject("dis","asdasdasdaadasda");
+        return mv;
     }
     //返回指定文字
     @RequestMapping("/text")
