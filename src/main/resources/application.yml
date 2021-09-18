@@ -8,7 +8,14 @@ spring:
 
     resources:
         static-locations: classpath:/
-    mvc:
-        view:
-            prefix: templates/
-            suffix: .html
+#    mvc:
+#        view:
+#            prefix: templates/
+#            suffix: .html
+
+    thymeleaf:
+        cache: false
+        encoding: utf-8
+        mode: HTML5
+        prefix: classpath:templates/
+        suffix: .html

@@ -18,6 +18,7 @@ public class WebController {
     public ModelAndView index(){
         ModelAndView mv = new ModelAndView("index");
         mv.addObject("dis","asdasdasdaadasda");
+        mv.addObject("dis1","1111");
         return mv;
     }
     //返回指定文字
