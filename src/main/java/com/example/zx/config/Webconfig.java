@@ -47,4 +47,6 @@ public class Webconfig implements WebMvcConfigurer {
         configurer.enable();
         configurer.enable("/zx/**");
     }
+
+
 }
