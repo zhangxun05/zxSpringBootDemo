@@ -11,4 +11,6 @@ public interface NewsService {
     News getObjById(Integer id);
 
     Boolean saveOrUpdate(News news);
+
+    Boolean delete(News news);
 }

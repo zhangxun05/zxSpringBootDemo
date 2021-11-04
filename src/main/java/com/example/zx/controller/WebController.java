@@ -77,4 +77,11 @@ public class WebController {
         return new ResposeData(true,"保存成功",null);
     }
 
+    //返回指定页面
+    @RequestMapping("/news_del")
+    public ModelAndView news_del(News news){
+        this.newsService.delete(news);
+        return news_list();
+    }
+
 }

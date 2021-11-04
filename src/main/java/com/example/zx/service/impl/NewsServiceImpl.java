@@ -6,6 +6,7 @@ import com.example.zx.service.NewsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -29,7 +30,15 @@ public class NewsServiceImpl implements NewsService {
     public Boolean saveOrUpdate(News news) {
         if(news.getId()!=null){
             return newsMapper.update(news);
+        }else {
+            news.setCreate_time(new Date());
         }
         return newsMapper.save(news);
+    }
+
+    @Override
+    public Boolean delete(News news) {
+
+        return newsMapper.delete(news);
     }
 }
